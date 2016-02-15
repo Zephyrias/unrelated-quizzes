@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Unrelated Quizzes</title>
+
+		<!-- Bower Dependencies -->
+		<script src="bower_components/jquery/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/requirejs/require.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+
+		<!-- Scripts -->
+		<script>
+			require(["htdocs/scripts/main"], function (main) {
+				angular.bootstrap(document, ['unQuizApp']);
+			});
+		</script>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="htdocs/styles/main.css" media="screen">
+	</head>
+
+	<body ng-controller="unQuizController" class="uq-page-wrapper">
+		<div ng-view class="uq-page"></div>
+	</body>
+</html>

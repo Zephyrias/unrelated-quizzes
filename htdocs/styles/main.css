@@ -1,0 +1,18 @@
+/*
+ * Main Stylesheet for Unrelated Quizzes
+ *
+ * Import all other stylesheets here.
+ */
+
+
+ .uq-page-wrapper{
+	background-color: black;
+ }
+
+.uq-page p {
+	color: #ddd;
+}
+
+.uq-page a {
+	color: #ddd;
+}
