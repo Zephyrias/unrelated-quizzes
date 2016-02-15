@@ -1,6 +1,9 @@
 define(
-	[],
-	function () {
+	[
+		'unQuiz/home',
+		'unQuiz/undertale/newhome'
+	],
+	function (home, newhome) {
 		'use strict';
 
 		var dependencies = [
@@ -14,18 +17,8 @@ define(
 		unQuizApp.config(['$routeProvider', function ($routeProvider) {
 			// Mapping of routes to the corresonding modules
 			var routes = {
-				'/': {
-					template: '<div> <p>{{ message }}</p> </div> <a href="#/undertale"> Mt. Ebott </a>',
-					controller: function ($scope) {
-						$scope.message = "Main Page";
-					}
-				},
-				'/undertale': {
-					template: "<div> <p>{{message }}</p> </div> <a href='#/'> Home </a>",
-					controller: function ($scope) {
-						$scope.message = "Undertale";
-					}
-				}
+				'/': home,
+				'/undertale': newhome
 			};
 
 		    Object.keys(routes).forEach(function (key) {

@@ -12,7 +12,22 @@
 
 		<!-- Scripts -->
 		<script>
-			require(["htdocs/scripts/main"], function (main) {
+			// Configuration
+			requirejs.config({
+				baseUrl: "bower_components/",
+				paths: {
+					"angular": "angular/angular",
+					"text": "requirejs-text/text",
+					"json": "requirejs-plugins/src/json",
+					"unQuiz": "../htdocs/scripts",
+					"filament": "filament/htdocs"
+				},
+				name: "../htdocs/main",
+				optimize: "none"
+			});
+
+			// Initialize App
+			require(["../htdocs/main"], function (main) {
 				angular.bootstrap(document, ['unQuizApp']);
 			});
 		</script>
