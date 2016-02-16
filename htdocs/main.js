@@ -1,9 +1,11 @@
 define(
 	[
 		'unQuiz/home',
-		'unQuiz/undertale/newhome'
+		'unQuiz/undertale/newhome',
+		'unQuiz/undertale/gameshow',
+		'unQuiz/undertale/underconstruction'
 	],
-	function (home, newhome) {
+	function (home, newhome, gameshow, underconstruction) {
 		'use strict';
 
 		var dependencies = [
@@ -18,12 +20,18 @@ define(
 			// Mapping of routes to the corresonding modules
 			var routes = {
 				'/': home,
-				'/undertale': newhome
+				'/undertale': newhome,
+				'/undertale/game-show': gameshow,
+				'/undertale/judgment-hall': underconstruction,
+				'/undertale/puzzle-paradise': underconstruction,
+				'/undertale/wishing-room': underconstruction
 			};
 
 		    Object.keys(routes).forEach(function (key) {
 		        $routeProvider.when(key, routes[key]);
 		    });
+
+		    $routeProvider.otherwise(underconstruction);
 		}]);
 
 		// Anything that needs to happen across the entire app goes here.

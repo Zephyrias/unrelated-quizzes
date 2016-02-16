@@ -7,6 +7,7 @@
 
 .uq-page-wrapper{
 	background-color: black;
+	padding: 50px 20px;
 }
 
 .uq-page p {
@@ -15,4 +16,36 @@
 
 .uq-page a {
 	color: #ddd;
+}
+
+
+/* Undertale-related so far*/
+/* Font credit:
+ * https://www.behance.net/gallery/31268855/Determination-Better-Undertale-Font
+ */
+
+.uq-under-construction > * {
+	color: white;
+	display: block;
+	-webkit-font-smoothing: none;
+    font-size: 30px;
+	font-family: 'determination_monoregular';
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 50%;
+}
+
+.uq-delayed-line {
+	padding-left: 70px;
+}
+
+.uq-out-of-construction {
+	display: block;
+	font-family: 'determination_sansregular';
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	position: relative;
+	width: 200px;
 }
